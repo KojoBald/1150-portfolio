@@ -1,15 +1,13 @@
 <template>
-  <section class="container">
-  </section>
+  <banner />
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
-
-export default {
-}
+import Banner from '~/components/Banner.vue'
+  export default {
+    components: { Banner }
+  }
 </script>
 
 <style>
-
 </style>
