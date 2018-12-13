@@ -41,7 +41,8 @@ module.exports = {
   */
   modules: [,
     // Doc: https://bootstrap-vue.js.org/docs/
-    'bootstrap-vue/nuxt'
+    'bootstrap-vue/nuxt',
+    ['nuxt-sass-resources-loader', '@/assets/styles/_variables.scss']
   ],
 
   /*
@@ -51,8 +52,6 @@ module.exports = {
     /*
     ** You can extend webpack config here
     */
-    extend(config, ctx) {
-
-    }
+    extend(config, ctx) {}
   }
 }
