@@ -1,42 +1,27 @@
 <template>
-  <div id="banner" @mousemove="onMouseMove">
+  <div id="banner" :style="{ transform: `translateY(${-$screen.scrollY/3}px)` }" v-if="visible">
     <div id="logo">
-      <span class="red" :style='{ transform: `translateX(${-x}px) translateY(${y}px)`}'>Kaleb Baldwin</span>
-      <span class="white">Kaleb Baldwin</span>
-      <span class="cyan" :style='{ transform: `translateX(${x}px) translateY(${-y}px)`}'>Kaleb Baldwin</span>
+      <glitch-text>Kaleb Baldwin</glitch-text>
+      <span class="subtitle">Freelance Web Developer</span>
     </div>
   </div>
 </template>
 
 <script>
-import _throttle from 'lodash.throttle'
-
-let _windowHeight;
-let _windowWidth;
+import GlitchText from '~/components/GlitchText'
 
 export default {
-  data: () => {
-    return {
-      x: 5,
-      y: 5
-    }
-  },
+  components: { GlitchText },
+  data: function() { return {
+    visible: true
+  }},
   methods: {
-    onMouseMove: _throttle(function({ clientX, clientY }) {
-      console.log(clientX, clientY);
-      this.x = this.calcX(clientX);
-      this.y = this.calcY(clientY);
-    }, 50),
-    calcX: function(xMod) {
-      return (xMod / _windowWidth) * 12;
-    },
-    calcY: function(yMod) {
-      return (yMod / _windowHeight) * 5;
+    toggleVisibility() {
+      this.visible = !this.visible
     }
   },
   mounted() {
-    _windowWidth = window.innerWidth;
-    _windowHeight = window.innerHeight;
+    this.$screen.onScrollAt(this.$el.clientHeight, this.toggleVisibility);
   }
 }
 </script>
@@ -44,29 +29,36 @@ export default {
 <style lang="scss">
 #banner {
   width: 100vw;
-  height: 90vh;
-  background-color: #1E252B;
-  background: radial-gradient(ellipse closest-side, #1E252B 80%, lighten(#1E252B, 2%) 97%, lighten(#1E252B, 3%) 110%);
+  height: $banner-height;
+  background-color: $gray;
+  background: radial-gradient(ellipse closest-side, $gray 80%, lighten($gray, 2%) 97%, lighten($gray, 4%) 110%);
   color: white;
-  font-family: 'Venus Rising';
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: transform 35ms ease;
 
   #logo {
-    position: relative;
-    top: 50%;
-    left: 20%;
-    font-size: 2.5rem;
+    font-size: 4rem;
+    font-family: 'Venus Rising';
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: $banner-height;
 
-    span {
-      position: absolute;
-      transition: transform 50ms ease;
+    .subtitle {
+      font-family: 'Ubuntu';
+      font-size: 2rem;
+      text-transform: uppercase;
     }
     .red {
-      color: #EB463D;
+      color: $red;
       opacity: .5;
       transform: translateX(0);
     }
     .cyan {
-      color: #62D9DA;
+      color: $cyan;
       opacity: .5;
       transform: translateX(0);
     }

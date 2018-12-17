@@ -1,7 +1,7 @@
 <template>
   <b-navbar id="nav" fixed="top">
     <b-navbar-brand>
-      <div id="nav__brand">Kaleb Baldwin</div>
+      <!-- <div id="nav__brand">Kaleb Baldwin</div> -->
     </b-navbar-brand>
     <b-navbar-nav>
       <b-nav-item>About</b-nav-item>
@@ -20,6 +20,7 @@ export default {
 <style lang="scss">
 #nav {
   background-color: rgba(#fff, 0);
+  font-family: 'Ubuntu', sans-serif;
 
   #nav__brand {
     font-family: 'Venus Rising';
