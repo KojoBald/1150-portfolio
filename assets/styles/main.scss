@@ -3,6 +3,11 @@
   src: url('/fonts/venus_rising.ttf');
 }
 
+body {
+  background: radial-gradient(ellipse closest-side, $gray 80%, lighten($gray, 2%) 97%, lighten($gray, 4%) 110%);
+  background-attachment: fixed;
+}
+
 #__nuxt {
   font-family: 'Open Sans', sans-serif;
 }
