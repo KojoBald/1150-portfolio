@@ -8,20 +8,16 @@
 </template>
 
 <script>
-import GlitchText from '~/components/GlitchText'
+import GlitchText from '~/components/UI/GlitchText'
 
 export default {
   components: { GlitchText },
   data: function() { return {
     visible: true
   }},
-  methods: {
-    toggleVisibility() {
-      this.visible = !this.visible
-    }
-  },
   mounted() {
-    this.$screen.onScrollAt(this.$el.clientHeight, this.toggleVisibility);
+    this.$screen.onScrollAt(this.$el.clientHeight + 50, () => this.visible = !this.visible );
+    //add 50px for the scroll listener to avoid screen flash when re rendering
   }
 }
 </script>

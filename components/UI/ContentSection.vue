@@ -26,7 +26,7 @@ export default {
   computed: {
     visualTranslate: function() {
       let translate = 0;
-      if(this.visualVisible) translate = (this.$screen.scrollY - this.visualY) / 5;
+      if(this.visualVisible) translate = (this.$screen.scrollY - this.visualY) / 3;
       return { transform: `translateY(${translate}px)` }
     }
   },
@@ -76,7 +76,6 @@ export default {
     position: relative;
     width: 100vw;
     padding: 30vh 0;
-    background-color: $gray;
     color: white;
     z-index: 1;
     display: flex;
