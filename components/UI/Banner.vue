@@ -1,5 +1,8 @@
 <template>
   <div id="banner" :style="{ transform: `translateY(${-$screen.scrollY/3}px)` }" v-if="visible">
+    <no-ssr>
+      <particles />
+    </no-ssr>
     <div id="logo">
       <glitch-text>Kaleb Baldwin</glitch-text>
       <span class="subtitle">Freelance Web Developer</span>
@@ -16,8 +19,8 @@ export default {
     visible: true
   }},
   mounted() {
-    this.$screen.onScrollAt(this.$el.clientHeight + 50, () => this.visible = !this.visible );
-    //add 50px for the scroll listener to avoid screen flash when re rendering
+    this.$screen.onScrollAt(this.$el.clientHeight, () => this.visible = !this.visible );
+    // add 50px for the scroll listener to avoid screen flash when re rendering
   }
 }
 </script>
@@ -32,7 +35,7 @@ export default {
   position: fixed;
   top: 0;
   left: 0;
-  transition: transform 35ms ease;
+  transition: transform 50ms ease;
 
   #logo {
     font-size: 4rem;

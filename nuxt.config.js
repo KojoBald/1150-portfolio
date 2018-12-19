@@ -36,7 +36,8 @@ module.exports = {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    { src: '~/plugins/screen.js' }
+    { src: '~/plugins/screen.js' },
+    { src: '~/plugins/vue-particles/index.js', ssr: false }
   ],
 
   /*

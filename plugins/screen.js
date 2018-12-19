@@ -10,7 +10,6 @@ const SCREEN = new Vue({ data: {
     SCROLL_POSITIONS.push(position);
     SCROLL_POSITIONS.sort((a, b) => a - b);
     if(nextPosIndex < 0) updatePositionIndices(+1);
-    console.log('added scroll listener', SCROLL_POSITIONS)
   }
 }});
 
@@ -72,7 +71,7 @@ function _initScreen() {
   SCREEN.width = window.innerWidth;
   SCREEN.scrollY = window.scrollY;
   window.addEventListener('resize', _throttle(onResize, 1000, { leading: false, trailing: true }));
-  window.addEventListener('scroll', _throttle(onScroll, 35));
+  window.addEventListener('scroll', _throttle(onScroll, 25));
 }
 
 export default ({ app }, inject) => {

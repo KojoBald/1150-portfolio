@@ -52,7 +52,6 @@ export default {
         display: inline-block;
         position: absolute;
         z-index: 1;
-        // opacity: .8;
       }
       &:before {
         top: 2px;
@@ -81,7 +80,7 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: transform 25ms ease;
+    transition: transform 50ms ease;
   }
 }
 </style>
