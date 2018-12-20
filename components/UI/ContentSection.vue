@@ -25,8 +25,7 @@ export default {
   },
   computed: {
     visualTranslate: function() {
-      let translate = 0;
-      if(this.visualVisible) translate = (this.$screen.scrollY - this.visualY) / 3;
+      let translate = (this.$screen.scrollY - this.visualY) / 3;
       return { transform: `translateY(${translate}px)` }
     }
   },

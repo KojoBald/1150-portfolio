@@ -5272,6 +5272,11 @@ popper.js@^1.12.9:
   resolved "https://registry.yarnpkg.com/popper.js/-/popper.js-1.14.6.tgz#ab20dd4edf9288b8b3b6531c47c361107b60b4b0"
   integrity sha512-AGwHGQBKumlk/MDfrSOf0JHhJCImdDMcGNoqKmKkU+68GFazv3CQ6q9r7Ja1sKDZmYWTckY/uLyEznheTDycnA==
 
+portal-vue@^1.5.0:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/portal-vue/-/portal-vue-1.5.0.tgz#3519a99a9035e83c000fdcb2a445a7d2fbc66deb"
+  integrity sha512-QzO/FQl4+SvS1pFd/DfAuIMH16WVXc7Yn8yze50uwxvzN54OuDApKfyygEvWnQ8adKrxbinQlqcsuHUyRxW3Qg==
+
 posix-character-classes@^0.1.0:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/posix-character-classes/-/posix-character-classes-0.1.1.tgz#01eac0fe3b5af71a2a6c02feabb8c1fef7e00eab"

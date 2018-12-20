@@ -46,7 +46,8 @@ module.exports = {
   modules: [,
     // Doc: https://bootstrap-vue.js.org/docs/
     'bootstrap-vue/nuxt',
-    ['nuxt-sass-resources-loader', '@/assets/styles/_variables.scss']
+    ['nuxt-sass-resources-loader', '@/assets/styles/_variables.scss'],
+    'portal-vue/nuxt'
   ],
 
   /*

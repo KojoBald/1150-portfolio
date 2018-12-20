@@ -35,7 +35,7 @@
         </b-form-group>
       </b-col>
       <b-col cols="2">
-        <b-button type="submit" variant="primary">SEND</b-button>
+        <b-button type="submit" variant="primary" :disabled="!allFormFieldsValid">SEND</b-button>
       </b-col>
     </b-row>
   </b-form>
@@ -91,10 +91,12 @@ export default {
       let operator = operators[randomNumberInRange(0, operators.length)];
       this.question.equation = `${operand1}${operator}${operand2}`;
       this.question.answer = eval(this.question.equation);
-    },
-    validateFormField: function(field, expectedValue) {
-      field.isValid = field.validate(field.value, expectedValue);
-    },
+    }
+  },
+  computed: {
+    allFormFieldsValid: function() {
+      return (this.firstName.isValid && this.lastName.isValid && this.email.isValid && this.subject.isValid && this.description.isValid && this.solution.isValid)
+    }
   },
   mounted() {
     this.generateQuestion();

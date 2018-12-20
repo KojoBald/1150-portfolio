@@ -4,9 +4,9 @@
       <!-- <div id="nav__brand">Kaleb Baldwin</div> -->
     </b-navbar-brand>
     <b-navbar-nav>
-      <b-nav-item>About</b-nav-item>
-      <b-nav-item>Projects</b-nav-item>
-      <b-nav-item>Contact</b-nav-item>
+      <b-nav-item href="#about">About</b-nav-item>
+      <b-nav-item href="#projects">Projects</b-nav-item>
+      <b-nav-item href="#contact">Contact</b-nav-item>
     </b-navbar-nav>
   </b-navbar>
 </template>

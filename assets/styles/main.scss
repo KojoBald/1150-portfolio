@@ -6,6 +6,7 @@
 body {
   background: radial-gradient(ellipse closest-side, $gray 80%, lighten($gray, 2%) 97%, lighten($gray, 4%) 110%);
   background-attachment: fixed;
+  overflow-x: hidden;
 }
 
 #__nuxt {

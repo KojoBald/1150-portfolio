@@ -23,7 +23,7 @@
 </template>
 
 <script>
-import Skill from '~/components/Skill'
+import Skill from '~/components/UI/Skill'
 
 export default {
   components: { Skill }
