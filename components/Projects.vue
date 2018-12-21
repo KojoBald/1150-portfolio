@@ -58,10 +58,9 @@
 
 <script>
 import Project from '~/components/UI/Project'
-import CssCreature from '~/components/CssCreature'
 
 export default {
-  components: { Project, CssCreature },
+  components: { Project },
   data: (_this) => ({
     projects: [],
     activeProjectIndex: 0,
@@ -107,12 +106,12 @@ export default {
     margin: 0 0 50px 0;
     padding: 0;
     left: 50%;
-    transition: transform 150ms ease;
+    transition: transform 250ms ease;
 
     li {
       margin: 0 2.5vw;
       flex: 0 0 auto;
-      transition: transform 150ms ease;
+      transition: transform 250ms ease;
       &:first-child {
         margin-left: 0;
       }
