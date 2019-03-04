@@ -71,7 +71,7 @@ function _initScreen() {
   SCREEN.width = window.innerWidth;
   SCREEN.scrollY = window.scrollY;
   window.addEventListener('resize', _throttle(onResize, 1000, { leading: false, trailing: true }));
-  window.addEventListener('scroll', _throttle(onScroll, 25));
+  window.addEventListener('scroll', _throttle(onScroll, 10));
 }
 
 export default ({ app }, inject) => {

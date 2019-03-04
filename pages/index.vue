@@ -17,17 +17,21 @@
           with myself. So here I am with the skills to pursue my passion and an excitement to discover the world.<br /> <br />
           Here's a few of my skills.
         </template>
+
         <skills />
+        
       </content-section>
 
       <content-section header="This is what I've done" id="projects">
         <template slot="text">
           I've worked on many web projects utilizing my frontend skills and backend development skills. <br />
-          As a frontend developer, I've worked with major frontend frameworks like Angular(1&amp;2), Vue (&lt;3), and React.<br />
+          As a frontend developer, I've worked with major frontend frameworks like Angular, Vue, and React.<br />
           On the backend side of things, I've mostly worked with PHP and Slim, but I'm also a big fan of Node.js with Express. <br /> <br />
           Take a look at some of the projects I've worked on.
         </template>
+
         <projects />
+
       </content-section>
 
       <content-section header="Get ahold of me" id="contact">
@@ -36,7 +40,9 @@
           Great! I love hearing from new people.<br /> <br />
           Fill out the contact form below, and I'll get back with you post haste.
         </template>
+
         <contact />
+
       </content-section>
     </div>
     <app-footer />

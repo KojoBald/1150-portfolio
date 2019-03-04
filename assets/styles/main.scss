@@ -4,7 +4,7 @@
 }
 
 body {
-  background: radial-gradient(ellipse closest-side, $gray 80%, lighten($gray, 2%) 97%, lighten($gray, 4%) 110%);
+  background: radial-gradient(ellipse closest-side, $gray 80%, lighten($gray, 2%) 97%, lighten($gray, 3%) 110%);
   background-attachment: fixed;
   overflow-x: hidden;
 }
@@ -15,4 +15,13 @@ body {
 
 h1, h2, h3, h4, h5 {
   font-family: 'Ubuntu', sans-serif !important;
+}
+
+a {
+  color: $red;
+  text-decoration-color: $red;
+  &:hover {
+    color: red;
+    text-decoration-color: $cyan;
+  }
 }

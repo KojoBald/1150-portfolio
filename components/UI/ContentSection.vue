@@ -46,26 +46,21 @@ export default {
     z-index: 5;
     h1 {
       position: relative;
-      &:before, &:after{
+      font-weight: 600;
+      opacity: .9;
+      &:before {
         content: attr(data-header);
         display: inline-block;
         position: absolute;
         z-index: 1;
-      }
-      &:before {
-        top: 2px;
-        left:-2px;
-        color: $red;
-      }
-      &:after {
-        top: -2px;
-        left: 2px;
+        top: 4px;
+        left:-4px;
         color: $cyan;
       }
       span {
         position: relative;
-        z-index: 5;
-        color: white;
+        color: $red;
+        z-index: 2;
       }
     }
   }
@@ -73,13 +68,12 @@ export default {
   .__visual {
     position: relative;
     width: 100vw;
-    padding: 30vh 0;
+    padding: 20vh 0;
     color: white;
     z-index: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: transform 50ms ease;
   }
 }
 </style>

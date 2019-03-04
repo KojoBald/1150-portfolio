@@ -71,7 +71,7 @@ export default {
     description: {
       value: '',
       isValid: null,
-      validate: _debounce((description) => description.isValid = (description.value.length > 50), 500)
+      validate: _debounce((description) => description.isValid = (description.value.length > 10), 500)
     },
     solution: {
       value: '',
